@@ -29,19 +29,17 @@
 <style>
 :root{--bg:#0A0A0A;--bg2:#0F0F0F;--bg3:#111;--bg4:#171717;--cyan:#05DBF2;--cyanB:#07F2F2;--teal:#1F98A6;--tealD:rgba(31,152,166,.12);--w:#F2F2F2;--w9:rgba(242,242,242,.9);--w7:rgba(242,242,242,.7);--w5:rgba(242,242,242,.5);--w3:rgba(242,242,242,.3);--w15:rgba(242,242,242,.15);--w08:rgba(242,242,242,.06);--fd:'Clash Display',sans-serif;--fb:'Outfit',sans-serif;--fm:'JetBrains Mono',monospace;--e:cubic-bezier(.16,1,.3,1)}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--teal) var(--bg);overflow-x:hidden}
-body{font-family:var(--fb);background:var(--bg);color:var(--w);overflow-x:hidden;-webkit-font-smoothing:antialiased;max-width:100vw}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--fb);background:var(--bg);color:var(--w);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 ::selection{background:rgba(5,219,242,.25)}
-::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--teal);border-radius:4px}
 a{text-decoration:none;color:inherit}
-body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");pointer-events:none;z-index:9990}
 
 /* SCROLL PROGRESS */
 #sProg{position:fixed;top:0;left:0;height:3px;background:var(--cyan);z-index:9999;width:0;box-shadow:0 0 12px var(--cyan)}
 
 
 
-.container{max-width:1200px;margin:0 auto;padding:0 clamp(24px,5vw,80px);overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 clamp(24px,5vw,80px)}
 
 /* REVEAL */
 .rv{opacity:0;transform:translateY(50px);transition:opacity 1s var(--e),transform 1s var(--e)}.rv.v{opacity:1;transform:translateY(0)}
@@ -55,10 +53,10 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .nlogo svg{width:28px;height:28px;color:var(--cyan);filter:drop-shadow(0 0 6px rgba(5,219,242,.4))}
 .nlt{font-family:var(--fm);font-size:18px;font-weight:600;letter-spacing:2px}.nlt span{color:var(--cyan)}
 .nlinks{display:flex;gap:32px;align-items:center}
-.nk{font-size:13px;font-weight:500;color:var(--w5);transition:color .3s;cursor:none;position:relative}
+.nk{font-size:13px;font-weight:500;color:var(--w5);transition:color .3s;position:relative}
 .nk::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--cyan);transition:width .3s var(--e)}
 .nk:hover{color:var(--cyan)}.nk:hover::after{width:100%}
-.ncta{font-family:var(--fb);font-size:13px;font-weight:600;color:var(--bg);background:var(--cyan);padding:10px 24px;border-radius:100px;border:none;cursor:none;transition:transform .3s var(--e),box-shadow .3s}
+.ncta{font-family:var(--fb);font-size:13px;font-weight:600;color:var(--bg);background:var(--cyan);padding:10px 24px;border-radius:100px;border:none;transition:transform .3s var(--e),box-shadow .3s}
 .ncta:hover{transform:scale(1.05);box-shadow:0 0 30px rgba(5,219,242,.35)}
 
 /* ═══ HERO ═══ */
@@ -79,7 +77,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .hdesc{font-size:clamp(16px,1.8vw,19px);font-weight:300;line-height:1.75;color:var(--w7);max-width:580px;margin-bottom:44px}
 .hdesc strong{color:var(--w);font-weight:600}
 .hactions{display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 36px;border-radius:100px;font-family:var(--fb);font-size:15px;font-weight:600;border:none;cursor:none;transition:all .4s var(--e);position:relative;overflow:hidden}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 36px;border-radius:100px;font-family:var(--fb);font-size:15px;font-weight:600;border:none;transition:all .4s var(--e);position:relative;overflow:hidden}
 .btn svg{width:18px;height:18px;flex-shrink:0}
 .btn-p{background:var(--cyan);color:var(--bg);box-shadow:0 4px 30px rgba(5,219,242,.15)}
 .btn-p::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.15) 0%,transparent 60%);opacity:0;transition:opacity .3s}
@@ -92,7 +90,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .hstat-l{font-size:13px;color:var(--w5);margin-top:4px}
 
 /* MARQUEE */
-.marquee{padding:44px 0;border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);overflow:hidden;max-width:100vw}
+.marquee{padding:44px 0;border-top:1px solid var(--w08);border-bottom:1px solid var(--w08);overflow:hidden}
 .mtrack{display:flex;animation:mq 22s linear infinite;width:max-content}.mtrack:hover{animation-play-state:paused}
 @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .mitem{display:flex;align-items:center;gap:16px;padding:0 44px;white-space:nowrap;font-family:var(--fm);font-size:13px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--w3);transition:color .3s}
@@ -223,24 +221,25 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .ftag{font-family:var(--fm);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
 .fcopy{font-size:12px;color:var(--w3)}
 
-.fwa{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:90;box-shadow:0 4px 24px rgba(37,211,102,.3);transition:transform .3s var(--e),box-shadow .3s;cursor:none}
+.fwa{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:90;box-shadow:0 4px 24px rgba(37,211,102,.3);transition:transform .3s var(--e),box-shadow .3s;}
 .fwa:hover{transform:scale(1.12);box-shadow:0 6px 32px rgba(37,211,102,.45)}.fwa svg{width:28px;height:28px;color:#fff}
 .fwa-p{position:absolute;inset:-5px;border-radius:50%;border:2px solid #25D366;animation:wap 2s ease-in-out infinite}
 @keyframes wap{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.35);opacity:0}}
 
-@media(max-width:900px){.cD,.cR,.cG{display:none}body{cursor:auto}.btn,.ncta,.fwa,a,button{cursor:pointer}.pain-grid{grid-template-columns:1fr}.sys-grid{grid-template-columns:1fr}.numbers-grid{grid-template-columns:1fr 1fr}.proof-scroll{grid-template-columns:1fr}.proc-steps{grid-template-columns:1fr 1fr}.proc-step:first-child{border-radius:20px 0 0 0}.proc-step:nth-child(2){border-radius:0 20px 0 0}.proc-step:nth-child(3){border-radius:0 0 0 20px}.proc-step:last-child{border-radius:0 0 20px 0}.proc-arrow{display:none}.hstats{gap:28px;flex-wrap:wrap}.nlinks{display:none}.ba-grid{grid-template-columns:1fr;gap:0}.ba-col:first-child{border-radius:20px 20px 0 0;border-right:1px solid var(--w08);border-bottom:none}.ba-col:last-child{border-radius:0 0 20px 20px;border-left:1px solid var(--w08)}.ba-divider{padding:12px 0}.ba-divider svg{transform:rotate(90deg)}.hero-orb{width:300px;height:300px}.chart-section{padding:24px 16px}.bar-label{min-width:90px;font-size:11px}.bar-fill{font-size:10px;padding-right:6px}}
+@media(max-width:900px){.pain-grid{grid-template-columns:1fr}.sys-grid{grid-template-columns:1fr}.numbers-grid{grid-template-columns:1fr 1fr}.proof-scroll{grid-template-columns:1fr}.proc-steps{grid-template-columns:1fr 1fr}.proc-step:first-child{border-radius:20px 0 0 0}.proc-step:nth-child(2){border-radius:0 20px 0 0}.proc-step:nth-child(3){border-radius:0 0 0 20px}.proc-step:last-child{border-radius:0 0 20px 0}.proc-arrow{display:none}.hstats{gap:28px;flex-wrap:wrap}.nlinks{display:none}.ba-grid{grid-template-columns:1fr;gap:0}.ba-col:first-child{border-radius:20px 20px 0 0;border-right:1px solid var(--w08);border-bottom:none}.ba-col:last-child{border-radius:0 0 20px 20px;border-left:1px solid var(--w08)}.ba-divider{padding:12px 0}.ba-divider svg{transform:rotate(90deg)}.hero-orb{width:300px;height:300px}.chart-section{padding:24px 16px}.bar-label{min-width:90px;font-size:11px}.bar-fill{font-size:10px;padding-right:6px}}
 @media(max-width:600px){.proc-steps{grid-template-columns:1fr}.proc-step,.proc-step:first-child,.proc-step:nth-child(2),.proc-step:nth-child(3),.proc-step:last-child{border-radius:0}.proc-step:first-child{border-radius:20px 20px 0 0}.proc-step:last-child{border-radius:0 0 20px 20px}.hactions{flex-direction:column}.btn{width:100%;justify-content:center}.hstats{flex-direction:column;gap:20px;align-items:center}.numbers-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:32px;letter-spacing:-1px}.sh2{font-size:24px}.pain-n{font-size:36px}.num-n{font-size:36px}.hstat-n{font-size:32px}.bar-label{min-width:70px;font-size:10px}.sys-card{padding:28px 20px}.pain-card{padding:24px 20px}}
 </style>
 </head>
 <body>
 <div id="sProg"></div>
-<div class="cD" id="cD"></div><div class="cR" id="cR"></div><div class="cG" id="cG"></div>
 
-<a href="https://wa.me/5517991271407?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20ThreeON%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20gratuito" class="fwa" target="_blank" rel="noopener" data-h><div class="fwa-p"></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+
+<a href="https://wa.me/5517991271407?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20ThreeON%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20gratuito" class="fwa" target="_blank" rel="noopener"><div class="fwa-p"></div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
 <nav class="nav" id="nav"><div class="ni">
-  <a href="#" class="nlogo" data-h><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg><div class="nlt">Three<span>ON</span></div></a>
-  <div class="nlinks"><a href="#problema" class="nk" data-h>O Problema</a><a href="#sistemas" class="nk" data-h>Sistemas</a><a href="#resultados" class="nk" data-h>Resultados</a><a href="#cta" class="ncta" data-h>Falar com especialista</a></div>
+  <a href="#" class="nlogo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg><div class="nlt">Three<span>ON</span></div></a>
+  <div class="nlinks"><a href="#problema" class="nk">O Problema</a><a href="#sistemas" class="nk">Sistemas</a><a href="#resultados" class="nk">Resultados</a><a href="#cta" class="ncta">Falar com especialista</a></div>
 </div></nav>
 
 <!-- ═══ HERO ═══ -->
@@ -250,8 +249,8 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <h1><span class="ln rv d1">Decisões inteligentes</span><span class="ln rv d2">começam com <span class="cy">sistemas</span></span><span class="ln rv d3"><span class="cy">inteligentes.</span></span></h1>
     <p class="hdesc rv d3">Sua empresa gera dados todos os dias. A pergunta é: <strong>você está usando eles para crescer — ou está perdendo dinheiro sem perceber?</strong></p>
     <div class="hactions rv d4">
-      <a href="#cta" class="btn btn-p" data-h><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Falar com especialista</a>
-      <a href="#sistemas" class="btn btn-g" data-h>Conhecer os sistemas</a>
+      <a href="#cta" class="btn btn-p"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Falar com especialista</a>
+      <a href="#sistemas" class="btn btn-g">Conhecer os sistemas</a>
     </div>
     <div class="hstats rv d5">
       <div><div class="hstat-n" data-counter="100" data-suffix="%">0%</div><div class="hstat-l">Integrado</div></div>
@@ -396,43 +395,51 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     </ul>
   </div>
   <p class="cta-detail rv d4">30 min · sem compromisso · sem pitch de vendas</p>
-  <a href="https://wa.me/5517991271407?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20ThreeON%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20gratuito" class="btn btn-wa rv d5" data-h target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar pelo WhatsApp</a>
+  <a href="https://wa.me/5517991271407?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20ThreeON%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20gratuito" class="btn btn-wa rv d5" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar pelo WhatsApp</a>
 </div></div></section>
 
 <footer class="footer"><div class="container"><div class="flogo">Three<span>ON</span></div><div class="ftag">AI-First Systems</div><p class="fcopy">&copy; 2026 ThreeON. Todos os direitos reservados.</p></div></footer>
 
 <script>
 (function(){
-  // PARTICLES
-  const cvs=document.getElementById('particles'),ctx=cvs.getContext('2d');let W,H,pts=[];
-  function rs(){const hero=cvs.parentElement;W=cvs.width=hero.offsetWidth;H=cvs.height=hero.offsetHeight}rs();window.addEventListener('resize',rs);
-  const isMobile=window.innerWidth<768;const pCount=isMobile?25:70;
-  for(let i=0;i<pCount;i++)pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.5,dx:(Math.random()-.5)*.3,dy:(Math.random()-.5)*.3,o:Math.random()*.4+.1});
-  let pmx=W/2,pmy=H/2;document.addEventListener('mousemove',e=>{pmx=e.clientX;pmy=e.clientY});
-  function dp(){ctx.clearRect(0,0,W,H);pts.forEach((p,i)=>{p.x+=p.dx;p.y+=p.dy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(5,219,242,${p.o})`;ctx.fill();for(let j=i+1;j<pts.length;j++){const dx=p.x-pts[j].x,dy=p.y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(5,219,242,${.06*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke()}}const mdx=p.x-pmx,mdy=p.y-pmy,md=Math.sqrt(mdx*mdx+mdy*mdy);if(md<150){const f=.8*(1-md/150);p.x+=mdx/md*f;p.y+=mdy/md*f}});requestAnimationFrame(dp)}dp();
+  var isMobile=window.innerWidth<768;
 
-  // CURSOR
-  const dot=document.getElementById('cD'),ring=document.getElementById('cR'),glow=document.getElementById('cG');let mx=0,my=0,rx=0,ry=0;
-  if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';glow.style.left=mx+'px';glow.style.top=my+'px'});(function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a)})();document.querySelectorAll('[data-h],a,button').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('ch'));el.addEventListener('mouseleave',()=>document.body.classList.remove('ch'))})}
-
-  // CARD GLOW
-  document.querySelectorAll('.sys-card').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');c.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%')})});
+  // PARTICLES — lightweight
+  var cvs=document.getElementById('particles'),ctx=cvs.getContext('2d'),W,H,pts=[];
+  function rs(){var h=cvs.parentElement;W=cvs.width=h.offsetWidth;H=cvs.height=h.offsetHeight}
+  rs();window.addEventListener('resize',rs);
+  var pCount=isMobile?15:40;
+  for(var i=0;i<pCount;i++)pts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.2+.4,dx:(Math.random()-.5)*.2,dy:(Math.random()-.5)*.2,o:Math.random()*.3+.1});
+  function dp(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<pts.length;i++){
+      var p=pts[i];p.x+=p.dx;p.y+=p.dy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.28);ctx.fillStyle='rgba(5,219,242,'+p.o+')';ctx.fill();
+      if(!isMobile){for(var j=i+1;j<pts.length;j++){var dx=p.x-pts[j].x,dy=p.y-pts[j].y,d=dx*dx+dy*dy;if(d<14400){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle='rgba(5,219,242,'+(0.05*(1-Math.sqrt(d)/120))+')';ctx.lineWidth=.5;ctx.stroke()}}}
+    }
+    requestAnimationFrame(dp);
+  }
+  dp();
 
   // REVEAL
-  const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')})},{threshold:.08,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)e.target.classList.add('v')})},{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
 
   // COUNTER
-  const cObs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.done){e.target.dataset.done='1';const t=+e.target.dataset.counter,s=e.target.dataset.suffix||'';if(!t)return;let c=0;const step=Math.max(1,Math.floor(t/40));const iv=setInterval(()=>{c+=step;if(c>=t){c=t;clearInterval(iv)}e.target.textContent=c+s},30)}})},{threshold:.5});document.querySelectorAll('[data-counter]').forEach(el=>cObs.observe(el));
+  var cObs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting&&!e.target.dataset.done){e.target.dataset.done='1';var t=+e.target.dataset.counter,s=e.target.dataset.suffix||'';if(!t)return;var c=0,step=Math.max(1,Math.floor(t/40));var iv=setInterval(function(){c+=step;if(c>=t){c=t;clearInterval(iv)}e.target.textContent=c+s},30)}})},{threshold:.5});
+  document.querySelectorAll('[data-counter]').forEach(function(el){cObs.observe(el)});
 
-  // BAR CHART ANIMATION
-  const bObs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.done){e.target.dataset.done='1';e.target.querySelectorAll('.bar-fill').forEach((b,i)=>{setTimeout(()=>{b.style.width=b.dataset.width+'%'},i*200)})}})},{threshold:.3});document.querySelectorAll('#barChart').forEach(el=>bObs.observe(el));
+  // BAR CHART
+  var bObs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting&&!e.target.dataset.done){e.target.dataset.done='1';e.target.querySelectorAll('.bar-fill').forEach(function(b,i){setTimeout(function(){b.style.width=b.dataset.width+'%'},i*200)})}})},{threshold:.3});
+  document.querySelectorAll('#barChart').forEach(function(el){bObs.observe(el)});
 
   // NAV + PROGRESS
-  const nav=document.getElementById('nav'),prog=document.getElementById('sProg');let ticking=false;
-  window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(()=>{nav.classList.toggle('scrolled',window.scrollY>60);const max=document.documentElement.scrollHeight-window.innerHeight;prog.style.width=(window.scrollY/max*100)+'%';ticking=false});ticking=true}});
+  var nav=document.getElementById('nav'),prog=document.getElementById('sProg'),ticking=false;
+  window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(function(){nav.classList.toggle('scrolled',window.scrollY>60);var max=document.documentElement.scrollHeight-window.innerHeight;prog.style.width=(window.scrollY/max*100)+'%';ticking=false});ticking=true}});
 
   // SMOOTH SCROLL
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
 })();
 </script>
 </body>
